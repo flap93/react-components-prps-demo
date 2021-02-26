@@ -1,25 +1,54 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+
+function GreetingMessage() {
+  const message = 'Hello Ana!';
+  return (
+    <div>
+      <u>{message}</u>
+    </div>
+  );
+}
+
+function WelcomeBlock() {
+  return (
+    <div>
+      
+      <em>Welcome to our cool page. It is pleasure to have you here!</em>
+    </div>
+  );
+}
+
+function Student() {
+  return (
+    <div>
+      
+      <h1>Felix</h1>
+    </div>
+  )
+};
+ 
+
+function User(props) {
+  console.log(props);
+  return <div></div>;
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GreetingMessage />
+      <hr />
+      <WelcomeBlock />
+      <hr/>
+      <Student/>
+      <hr />
+      <User firstName="Harper" />
     </div>
   );
 }
 
 export default App;
+
+
