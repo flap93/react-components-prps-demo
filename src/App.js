@@ -32,7 +32,7 @@ function Student() {
 
 function User(props) {
   console.log(props);
-  return <div></div>;
+  return <div>User is: {props.firstName}</div>;
 }
 
 function App() {
