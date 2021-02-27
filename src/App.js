@@ -35,6 +35,16 @@ function User(props) {
   return <div>User is: {props.firstName}</div>;
 }
 
+function UsersList(props) {
+  return <div> {props.children} </div>;
+}
+
+class Color extends React.Component {
+  render() {
+    return <div>{this.props.favColor}</div>;
+  }
+}
+
 function App() {
   return (
     <div className="App">
@@ -45,6 +55,18 @@ function App() {
       <Student/>
       <hr />
       <User firstName="Harper" />
+      <User firstName="Mike" />
+      <User firstName="Alvaro" />
+      <User firstName="Andrea" />
+      <hr />
+      <UsersList>
+        <User firstName="Harper" />
+        <User firstName="Mike" />
+        <User firstName="Alvaro" />
+        <User firstName="Andrea" />
+      </UsersList>
+      <hr />
+      <Color favColor="blue" />
     </div>
   );
 }
